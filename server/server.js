@@ -15,9 +15,32 @@ import aiRoutes from "./routes/aiRoutes.js";
 
 connectDB();
 
-const app = express();
+const allowedOrigins = [
+  "https://voya-6z2o.vercel.app",
+  process.env.CLIENT_URL,
+].filter(Boolean);
 
-app.use(cors());
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+
+      const isAllowed = allowedOrigins.some(
+        (allowed) => origin === allowed || allowed.replace(/\/$/, "") === origin
+      );
+      const isLocalhost =
+        origin.startsWith("http://localhost:") ||
+        origin.startsWith("http://127.0.0.1:");
+
+      if (isAllowed || isLocalhost) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/api/journals", journalRoutes);
 app.use("/api/auth", authRoutes);
