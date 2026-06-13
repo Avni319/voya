@@ -20,18 +20,18 @@ function Navbar() {
 
   const activeClass = (path) => 
     location.pathname === path 
-      ? "text-teal-400 font-semibold" 
-      : "text-zinc-300 hover:text-teal-400 transition-colors";
+      ? "text-fuchsia-400 font-semibold drop-shadow-[0_0_8px_rgba(232,121,249,0.3)]" 
+      : "text-zinc-400 hover:text-fuchsia-400 transition-all duration-300";
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/60 border-b border-zinc-800">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Brand/Logo */}
         <Link to={isLoggedIn ? "/dashboard" : "/"} className="flex items-center gap-2 group">
-          <span className="text-teal-400 text-2xl group-hover:rotate-12 transition-transform duration-300">
-            <Plane size={24} className="fill-teal-400/20" />
+          <span className="text-fuchsia-400 text-2xl group-hover:rotate-12 transition-transform duration-300">
+            <Plane size={24} className="fill-fuchsia-400/20" />
           </span>
-          <span className="text-xl font-bold tracking-wider bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+          <span className="text-xl font-black tracking-wider bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.2)]">
             VOYA
           </span>
         </Link>
@@ -51,7 +51,7 @@ function Navbar() {
               </Link>
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-2 bg-zinc-800 hover:bg-red-500/20 hover:text-red-400 px-4 py-2 rounded-xl transition-all duration-300 text-sm font-medium border border-zinc-700 hover:border-red-500/30 cursor-pointer"
+                className="flex items-center gap-2 bg-[#0e0e1e]/60 hover:bg-rose-500/20 hover:text-rose-400 px-4 py-2 rounded-xl transition-all duration-300 text-sm font-medium border border-white/5 hover:border-rose-500/20 cursor-pointer"
               >
                 <LogOut size={16} />
                 Logout
@@ -64,13 +64,13 @@ function Navbar() {
               </Link>
               <Link
                 to="/login"
-                className="text-zinc-300 hover:text-white transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
               >
                 Login
               </Link>
               <Link
                 to="/signup"
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:opacity-90 px-5 py-2 rounded-xl font-medium shadow-md shadow-teal-500/10 transition-all"
+                className="bg-gradient-to-r from-violet-600 to-fuchsia-500 hover:from-violet-500 hover:to-fuchsia-400 px-5 py-2 rounded-xl font-medium shadow-lg shadow-fuchsia-500/20 transition-all duration-300"
               >
                 Sign Up
               </Link>
@@ -92,7 +92,7 @@ function Navbar() {
 
       {/* Mobile Drawer/Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-zinc-950/95 border-b border-zinc-800 px-6 py-6 absolute top-[65px] left-0 w-full flex flex-col gap-5 shadow-2xl backdrop-blur-lg animate-in fade-in slide-in-from-top-5 duration-200">
+        <div className="md:hidden bg-[#070612]/95 border-b border-white/5 px-6 py-6 absolute top-[65px] left-0 w-full flex flex-col gap-5 shadow-2xl backdrop-blur-lg animate-in fade-in slide-in-from-top-5 duration-200">
           {isLoggedIn ? (
             <>
               <Link
@@ -118,7 +118,7 @@ function Navbar() {
               </Link>
               <button
                 onClick={handleLogout}
-                className="flex items-center justify-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 py-3 rounded-xl transition-all text-base font-semibold border border-red-500/20 cursor-pointer"
+                className="flex items-center justify-center gap-2 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 py-3 rounded-xl transition-all text-base font-semibold border border-rose-500/20 cursor-pointer"
               >
                 <LogOut size={18} />
                 Logout
@@ -136,14 +136,14 @@ function Navbar() {
               <Link
                 to="/login"
                 onClick={() => setIsOpen(false)}
-                className="text-center text-lg py-2 text-zinc-300 hover:text-white"
+                className="text-center text-lg py-2 text-zinc-400 hover:text-white"
               >
                 Login
               </Link>
               <Link
                 to="/signup"
                 onClick={() => setIsOpen(false)}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:opacity-90 py-3 rounded-xl font-medium shadow-md shadow-teal-500/10 text-center text-base"
+                className="bg-gradient-to-r from-violet-600 to-fuchsia-500 hover:from-violet-500 hover:to-fuchsia-400 py-3 rounded-xl font-medium shadow-lg shadow-fuchsia-500/20 text-center text-base"
               >
                 Sign Up
               </Link>
