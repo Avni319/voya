@@ -108,17 +108,17 @@ function Dashboard() {
 
   <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-500/10 blur-[150px] rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-8 py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-24 pb-10">
 
         {/* Header */}
-         <div className="flex justify-between items-center mb-6">
+         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
 
   <div>
-    <h1 className="text-5xl font-bold mb-2">
+    <h1 className="text-3xl sm:text-5xl font-bold mb-2">
       Welcome Back, {user?.name} 👋
     </h1>
 
-    <p className="text-zinc-400 text-lg">
+    <p className="text-zinc-400 text-base sm:text-lg">
       Track every destination and relive every memory.
     </p>
   </div>
@@ -139,6 +139,7 @@ function Dashboard() {
     py-3
     rounded-xl
     font-medium
+    w-full md:w-auto
     "
   >
     Logout
@@ -272,9 +273,7 @@ function Dashboard() {
   )}
 </div>
 
-        {/* Create Trip Button */}
-
-       <div className="mt-10 flex gap-4">
+       <div className="mt-10 flex flex-col sm:flex-row gap-4">
 
           <button
             onClick={() => setIsModalOpen(true)}
@@ -282,6 +281,7 @@ function Dashboard() {
 group
 flex
 items-center
+justify-center
 gap-2
 bg-gradient-to-r
 from-teal-500
@@ -295,6 +295,8 @@ rounded-2xl
 font-semibold
 shadow-lg
 shadow-teal-500/20
+w-full sm:w-auto
+cursor-pointer
 "
           >
             <Plus size={20} />
@@ -311,6 +313,8 @@ shadow-teal-500/20
   bg-zinc-800
   hover:bg-zinc-700
   transition
+  w-full sm:w-auto
+  cursor-pointer
   "
 >
   Analytics
@@ -324,6 +328,8 @@ shadow-teal-500/20
   px-6
   py-3
   rounded-2xl
+  w-full sm:w-auto
+  cursor-pointer
   "
 >
   Explore

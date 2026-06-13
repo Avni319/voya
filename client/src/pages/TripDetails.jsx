@@ -249,9 +249,9 @@ useEffect(() => {
 
       </div>
 
-      <div className="max-w-5xl mx-auto px-8 py-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 py-10">
 
-        <h1 className="text-6xl font-bold mb-4">
+        <h1 className="text-4xl sm:text-6xl font-bold mb-4">
           {trip.title}
         </h1>
 
@@ -329,11 +329,11 @@ useEffect(() => {
   </div>
 
 )}
-<div className="bg-zinc-900 rounded-3xl p-8 mt-10">
+<div className="bg-zinc-900 rounded-3xl p-5 sm:p-8 mt-10">
 
-  <div className="flex justify-between items-center mb-6">
+  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
 
-    <h2 className="text-3xl font-bold">
+    <h2 className="text-2xl sm:text-3xl font-bold">
       Travel Journal
     </h2>
 
@@ -348,6 +348,8 @@ useEffect(() => {
       px-5
       py-2
       rounded-xl
+      w-full sm:w-auto
+      cursor-pointer
       "
     >
       Add Entry
@@ -437,11 +439,11 @@ useEffect(() => {
   </div>
 </div>
 
-<div className="bg-zinc-900 rounded-3xl p-8 mt-10">
+<div className="bg-zinc-900 rounded-3xl p-5 sm:p-8 mt-10">
 
-  <div className="flex justify-between items-center mb-6">
+  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
 
-    <h2 className="text-3xl font-bold">
+    <h2 className="text-2xl sm:text-3xl font-bold">
       Photo Gallery
     </h2>
 
@@ -456,6 +458,8 @@ useEffect(() => {
       px-5
       py-2
       rounded-xl
+      w-full sm:w-auto
+      cursor-pointer
       "
     >
       Upload Photo
@@ -527,11 +531,11 @@ useEffect(() => {
 </div>
 
 
-<div className="bg-zinc-900 rounded-3xl p-8 mt-10">
+<div className="bg-zinc-900 rounded-3xl p-5 sm:p-8 mt-10">
 
-  <div className="flex justify-between items-center mb-6">
+  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
 
-    <h2 className="text-3xl font-bold">
+    <h2 className="text-2xl sm:text-3xl font-bold">
       Expenses
     </h2>
 
@@ -546,6 +550,8 @@ useEffect(() => {
       px-5
       py-2
       rounded-xl
+      w-full sm:w-auto
+      cursor-pointer
       "
     >
       Add Expense

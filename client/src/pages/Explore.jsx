@@ -75,8 +75,8 @@ function Explore() {
         className="
         max-w-7xl
         mx-auto
-        px-8
-        py-12
+        px-4 sm:px-8
+        pt-28 pb-12
         "
       >
 
@@ -104,7 +104,7 @@ function Explore() {
 
           <h1
             className="
-            text-6xl
+            text-4xl sm:text-6xl
             font-bold
             mb-4
             "
@@ -115,7 +115,7 @@ function Explore() {
           <p
             className="
             text-zinc-400
-            text-xl
+            text-lg sm:text-xl
             "
           >
             Discover travel

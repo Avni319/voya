@@ -41,13 +41,13 @@ function Analytics() {
     );
 
   return (
-    <div className="min-h-screen bg-black text-white p-10">
+    <div className="min-h-screen bg-black text-white pt-28 pb-10 px-4 sm:px-10">
 
-      <h1 className="text-5xl font-bold mb-10">
+      <h1 className="text-3xl sm:text-5xl font-bold mb-10">
         Travel Analytics
       </h1>
 
-      <div className="grid md:grid-cols-4 gap-6 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
 
         <div className="bg-zinc-900 rounded-3xl p-6">
           <p>Total Trips</p>

@@ -77,13 +77,13 @@ function PublicTrip() {
 
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="absolute bottom-10 left-10">
+        <div className="absolute bottom-6 sm:bottom-10 left-4 sm:left-10 right-4">
 
-          <h1 className="text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-6xl font-bold mb-4">
             {trip.title}
           </h1>
 
-          <p className="text-xl text-zinc-300">
+          <p className="text-base sm:text-xl text-zinc-300">
             {trip.description}
           </p>
 
@@ -91,7 +91,7 @@ function PublicTrip() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-10">
 
         {/* Stats */}
 
@@ -131,7 +131,7 @@ function PublicTrip() {
 
         {/* Photos */}
 
-        <h2 className="text-4xl font-bold mb-6">
+        <h2 className="text-2xl sm:text-4xl font-bold mb-6">
           Photos
         </h2>
 
@@ -162,7 +162,7 @@ function PublicTrip() {
 
         {/* Journals */}
 
-        <h2 className="text-4xl font-bold mb-6">
+        <h2 className="text-2xl sm:text-4xl font-bold mb-6">
           Travel Journal
         </h2>
 
@@ -195,7 +195,7 @@ function PublicTrip() {
 
         {/* Expenses */}
 
-        <h2 className="text-4xl font-bold mb-6">
+        <h2 className="text-2xl sm:text-4xl font-bold mb-6">
           Expenses
         </h2>
 
